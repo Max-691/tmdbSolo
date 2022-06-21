@@ -56,6 +56,26 @@ header{
   width: 100%;
 }
 
+.note{
+  border-radius: 100px;
+}
+
+.red{
+  background-color: red;
+}
+
+.orange{
+  background-color: orange;
+}
+
+.green{
+  background-color: green;
+}
+
+.blue{
+  background-color: #015273;
+}
+
 footer{
   text-align: center;
   padding: 1rem;
