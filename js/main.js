@@ -64,6 +64,20 @@ for (let i = 0; i < data.length; i++) {
   
 }
 
-if (data[i].note >= 25) {
-  data[i].note.classList.add('note')
+const notes = document.querySelectorAll('.note');
+
+for (let i = 0; i < data[i].note; i++) {
+  if (data[i].note <= 25) {
+    notes[i].classList.add('red');
+  }
+ else if(data[i].note <= 50){
+    notes[i].classList.add('orange');
+  }
+  else if(data[i].note <= 75){
+    notes[i].classList.add('green');
+  }
+  else{
+    notes[i].classList.add('blue');
+  }
 }
+
