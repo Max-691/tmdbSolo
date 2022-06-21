@@ -1,0 +1,27 @@
+/*GLOBAL*/
+*{box-sizing: border-box;}
+html{font-size: 62.5%;}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 1;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.553);
+}
+img{max-width: 100%;}
+ul{padding: 0; margin: 0;}
+a{text-decoration: none; color: white;}
+
+h1{
+  font-size: 4rem;
+  font-family: 'Roboto Mono', sans-serif;
+}
+/*Header*/
+header{
+  background: url('../img/tmdb_header.png'), no-repeat;
+  background-position-y: 70%;
+  background-size: 100%;
+  padding: 3rem;
+  text-align: center;
+}
