@@ -23,7 +23,7 @@ main {
   flex-grow: 1;
 }
 img{max-width: 100%;}
-ul{padding: 0; margin: 0;}
+ul{padding: 0; margin: 0; list-style: none;}
 a{text-decoration: none; color: white;}
 
 h1{
@@ -37,7 +37,31 @@ header{
   background-size: 100%;
   padding: 3rem;
   text-align: center;
-  margin-bottom: 6rem;
+}
+
+#filters{
+  padding: 2rem;
+}
+
+#filters ul{
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+#filters li{
+  margin-left: 4rem;
+}
+
+#filters li:hover{
+  transform: scale(1.2);
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background: #01537365;
+}
+
+li:hover + .filter{
+  background: red;
 }
 
 #catalog{
@@ -57,13 +81,27 @@ header{
   position: relative;
 }
 
-.note{
-    max-width: fit-content;
-    border-radius: 100%;
-    position: absolute;
-    padding: 1rem;
+.img-container{
+  position: relative;
 }
 
+h2, .movie p:last-of-type{
+  text-align: center;
+}
+
+.movie p:last-of-type{
+  margin-top: 0;
+
+}
+
+/*Notes color*/
+.note{
+  max-width: fit-content;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
 
 .red{
   background-color: red;
@@ -81,12 +119,15 @@ header{
   background-color: #015273;
 }
 
+
+/*Footer*/
 footer{
   text-align: center;
   padding: 1rem;
   background: #015273;
 margin: top auto;
 }
+
 footer img{
   max-width: 8%;
 }
