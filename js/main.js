@@ -2,6 +2,20 @@ import '../css/style.css'
 
 const section = document.getElementById('catalog');
 
+const addClass = (note) => {
+  if (note <= 25) {
+    return 'red';
+  }
+ else if(note <= 50){
+    return 'orange';
+  }
+  else if(note <= 75){
+    return 'green';
+  }
+  else{
+    return 'blue';
+  }
+}
 
 const data = [
   {
@@ -57,27 +71,12 @@ const data = [
 for (let i = 0; i < data.length; i++) {
   section.innerHTML += ` <article class="movie">
   <a href="#"><img src="${data[i].banner}" alt="film"></a>
-  <p class="note">${data[i].note} %</p>
+  <p class="note ${addClass(data[i].note)}">${data[i].note} %</p>
   <h2>${data[i].title}</h2>
   <p>${data[i].date}</p>
 </article>` 
   
 }
 
-const notes = document.querySelectorAll('.note');
 
-for (let i = 0; i < data[i].note; i++) {
-  if (data[i].note <= 25) {
-    notes[i].classList.add('red');
-  }
- else if(data[i].note <= 50){
-    notes[i].classList.add('orange');
-  }
-  else if(data[i].note <= 75){
-    notes[i].classList.add('green');
-  }
-  else{
-    notes[i].classList.add('blue');
-  }
-}
 

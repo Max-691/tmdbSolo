@@ -59,15 +59,9 @@ header{
 
 .note{
     max-width: fit-content;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 10px;
-    padding-right: 10px;
     border-radius: 100%;
     position: absolute;
-    transform: translateX(-50%);
-    transform: translateY(250%);
-    bottom: 0;
+    padding: 1rem;
 }
 
 
