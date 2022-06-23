@@ -49,20 +49,19 @@ header{
   font-size: 1.6rem;
 }
 
-#filters li{
+#filters li a{
   margin-left: 4rem;
-}
-
-#filters li:hover{
-  transform: scale(1.2);
   transition-duration: 0.4s;
-  cursor: pointer;
-  background: #01537365;
 }
 
-li:hover + .filter{
-  background: red;
-}
+ul:hover > li a {
+  opacity: 0.4;
+ }
+ 
+ ul > li:hover a {
+   opacity: 1;
+ }
+ 
 
 #catalog{
   display: flex;
