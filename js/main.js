@@ -105,11 +105,16 @@ render();
 
 for(let i = 0; i < filters.length; i++){
   filters[i].addEventListener('change', (e)=>{
-    if(e.target.checked){
-      currentFilters.push(e.target.id);
-      filteredData = data
-      render();
-    }
+
+
+  // if(e.target.checked){
+  //   currentFilters.push(e.target.id);
+  //   filteredData = data
+  //   render();
+
   })
 }
 //filtered data = liste films qui ont les catégories présente dans currentFilter
+
+//si filtre coché alors filtered data ajoute de filtre dans le tableau
+//si décoché l'enlever des tableaux
