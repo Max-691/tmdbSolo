@@ -2,10 +2,9 @@ import '../css/style.css'
 
 const section = document.getElementById('catalog');
 
-const filtersUl = document.getElementById('filtersUl');
-const filtersLi = document.querySelectorAll('.filter');
+const filters = document.querySelectorAll('input');
 
-const movies = document.querySelectorAll('.movie');
+const currentFilters = [];
 
 //Notes color
 const addClass = (note) => {
@@ -83,33 +82,34 @@ const data = [
     note: 60,
     genre: ["Racing", "Horror", "Fiction"]
   }
-]
+];
 
+let filteredData = data;
 
-for (let i = 0; i < data.length; i++) {
+const render = ()=>{
+  for (let i = 0; i < filteredData.length; i++) {
   section.innerHTML += ` 
-
   <article class="movie">
   <div class="img-container">
-  <a href="#"><img src="${data[i].banner}" alt="film"></a>
-  <p class="note ${addClass(data[i].note)}">${data[i].note} %</p>
+  <a href="#"><img src="${filteredData[i].banner}" alt="film"></a>
+  <p class="note ${addClass(filteredData[i].note)}">${filteredData[i].note} %</p>
   </div>
-  <h2>${data[i].title}</h2>
-  <p>${data[i].date}</p>
-</article>` 
-
+  <h2>${filteredData[i].title}</h2>
+  <p>${filteredData[i].date}</p>
+  </article>` 
+  }
 }
 
-for (let i = 0; i < filtersLi.length; i++) {
-  filtersLi[i].addEventListener('click', ()=>{
+render();
 
-    for (let i = 0; i < movies.length; i++) {
-      if (!data[i].genre.indexOf('${filterLi.innerText}')) {
-        console.log(filtersLi[i].innerText)
-        movies[i].classList.add('hidden')
-      }
+
+for(let i = 0; i < filters.length; i++){
+  filters[i].addEventListener('change', (e)=>{
+    if(e.target.checked){
+      currentFilters.push(e.target.id);
+      filteredData = data
+      render();
     }
-    });
-  
-
+  })
 }
+//filtered data = liste films qui ont les catégories présente dans currentFilter
