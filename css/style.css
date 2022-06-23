@@ -41,6 +41,27 @@ header{
 
 #filters{
   padding: 2rem;
+  margin-bottom: 3rem;
+  background-color: #bdbdbd2c;
+}
+/*
+.hidden{
+  display: none;
+}
+*/
+
+form{
+  display: flex;
+  justify-content: center;
+  background-color: #bdbdbd2c;
+  padding: 2rem;
+}
+
+form label{
+  margin-left: 3rem;
+}
+form input{
+  margin-left: 5px;
 }
 
 #filters ul{
@@ -53,7 +74,7 @@ header{
   margin-left: 4rem;
   transition-duration: 0.4s;
 }
-
+/*Opacity when hover genres li*/
 ul:hover > li a {
   opacity: 0.4;
  }
@@ -62,6 +83,7 @@ ul:hover > li a {
    opacity: 1;
  }
  
+
 
 #catalog{
   display: flex;

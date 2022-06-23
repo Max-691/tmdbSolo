@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,20 +16,38 @@
       <h1>Catalogue de films</h1>
     </header>
     <main>
-      <div id="filters">
-        <ul>
-          <li class="filter"><a href="#">Drama</a></li>
-          <li class="filter"><a href="#">Action</a></li>
-          <li class="filter"><a href="#">Racing</a></li>
-          <li class="filter"><a href="#">Fiction</a></li>
-          <li class="filter"><a href="#">Comedy</a></li>
-          <li class="filter"><a href="#">Horror</a></li>
-          <li class="filter"><a href="#">Love</a></li>
-          <li class="filter"><a href="#">Biography</a></li>
-          <li class="filter"><a href="#">Adventure</a></li>
-          <li class="filter"><a href="#">Documentary</a></li>
-        </ul>
-      </div>
+      <form>
+        <label for="Action">Action</label>
+        <input type="checkbox" id="Action">
+
+        <label for="Drama">Drama</label>
+        <input type="checkbox" id="Drama">
+
+        <label for="Horror">Horror</label>
+        <input type="checkbox" id="Horror">
+
+        <label for="Adventure">Adventure</label>
+        <input type="checkbox" id="Adventure">
+
+        <label for="Fiction">Fiction</label>
+        <input type="checkbox" id="Fiction">
+
+        <label for="Comedy">Comedy</label>
+        <input type="checkbox" id="Comedy">
+
+        <label for="Biography">Biography</label>
+        <input type="checkbox" id="Biography">
+
+        <label for="Documentary">Documentary</label>
+        <input type="checkbox" id="Documentary">
+
+        <label for="Racing">Racing</label>
+        <input type="checkbox" id="Racing">
+
+        <label for="Love">Love</label>
+        <input type="checkbox" id="Love">
+      </form>
+       
       <section id="catalog">
        
         <!---  <article class="movie">

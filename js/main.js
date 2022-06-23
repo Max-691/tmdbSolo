@@ -3,8 +3,9 @@ import '../css/style.css'
 const section = document.getElementById('catalog');
 
 const filtersUl = document.getElementById('filtersUl');
-const filtersLi = document.querySelectorAll('.filter')
-console.log(filtersLi)
+const filtersLi = document.querySelectorAll('.filter');
+
+const movies = document.querySelectorAll('.movie');
 
 //Notes color
 const addClass = (note) => {
@@ -31,56 +32,56 @@ const data = [
     title: "Film1",
     date: "02 Jan 2022",
     note: 70,
-    genre: [genre[0], genre[1]]
+    genre: ["Drama", "Action"]
   },
   {
     banner: "img/film2.jpg",
     title: "Film2",
     date: "02 Jan 2022",
     note: 10,
-    genre: [genre[2], genre[3]]
+    genre: ["Racing", "Fiction"]
   },
   {
     banner: "img/film3.jpg",
     title: "Film3",
     date: "02 Jan 2022",
     note: 45,
-    genre: [genre[4], genre[6]]
+    genre: ["Comedy", "Adventure"]
   },
   {
     banner: "img/film4.jpg",
     title: "Film4",
     date: "02 Jan 2022",
     note: 30,
-    genre: [genre[3], genre[5]]
+    genre: ["Fiction", "Horror"]
   },
   {
     banner: "img/film5.jpg",
     title: "Film5",
     date: "02 Jan 2022",
     note: 85,
-    genre: [genre[7]]
+    genre: ["Racing"]
   },
   {
     banner: "img/film6.jpg",
     title: "Film6",
     date: "02 Jan 2022",
     note: 90,
-    genre: [genre[8], genre[9]]
+    genre: ["Biography", "Love"]
   },
   {
     banner: "img/film7.jpg",
     title: "Film7",
     date: "02 Jan 2022",
     note: 55,
-    genre: [genre[1], genre[2], genre[5]]
+    genre: ["Action", "Comedy", "Adventure"]
   },
   {
     banner: "img/film8.jpg",
     title: "Film8",
     date: "02 Jan 2022",
     note: 60,
-    genre: [genre[7], genre[9], genre[10]]
+    genre: ["Racing", "Horror", "Fiction"]
   }
 ]
 
@@ -99,3 +100,16 @@ for (let i = 0; i < data.length; i++) {
 
 }
 
+for (let i = 0; i < filtersLi.length; i++) {
+  filtersLi[i].addEventListener('click', ()=>{
+
+    for (let i = 0; i < movies.length; i++) {
+      if (!data[i].genre.indexOf('${filterLi.innerText}')) {
+        console.log(filtersLi[i].innerText)
+        movies[i].classList.add('hidden')
+      }
+    }
+    });
+  
+
+}
