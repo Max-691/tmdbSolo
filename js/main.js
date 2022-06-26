@@ -4,7 +4,7 @@ const section = document.getElementById('catalog');
 
 const filters = document.querySelectorAll('input');
 
-const currentFilters = [];
+const currentFilters = ["Drama", "Action", "Racing", "Fiction", "Comedy", "Horror", "Love", "Biography", "Adventure", "Documentary"];
 
 //Notes color
 const addClass = (note) => {
@@ -22,7 +22,7 @@ const addClass = (note) => {
   }
 }
 
-const genre = ["drama", "action", "racing", "fiction", "comedy", "horror", "love", "biography", "adventure", "documentary"];
+
 
 const data = [
 
@@ -105,7 +105,7 @@ render();
 
 for(let i = 0; i < filters.length; i++){
   filters[i].addEventListener('change', (e)=>{
-
+    
 
   // if(e.target.checked){
   //   currentFilters.push(e.target.id);
